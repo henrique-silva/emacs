@@ -78,3 +78,13 @@
 
 ;; Magit configuration
 (global-set-key (kbd "C-x g") 'magit-status)
+
+;; Indent whole buffer command
+(defun indent-buffer ()                                                     
+  "Indents an entire buffer using the default intenting scheme."
+  (interactive)
+  (save-excursion
+    (delete-trailing-whitespace)
+    (indent-region (point-min) (point-max) nil)
+    (untabify (point-min) (point-max))))
+(global-set-key "\C-x\\" 'indent-buffer)
