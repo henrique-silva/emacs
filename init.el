@@ -88,3 +88,8 @@
     (indent-region (point-min) (point-max) nil)
     (untabify (point-min) (point-max))))
 (global-set-key "\C-x\\" 'indent-buffer)
+;; Cmake mode
+(add-to-list 'load-path "~/.emacs.d/cmake/")
+(require 'cmake-mode)
+
+(setq markdown-command "~/.emacs.d/github_flavor.rb")
