@@ -69,10 +69,10 @@
 (tool-bar-mode 0)
 
 ;; Ease window resizing
-(global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
-(global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
-(global-set-key (kbd "S-C-<down>") 'shrink-window)
-(global-set-key (kbd "S-C-<up>") 'enlarge-window)
+(global-set-key (kbd "C-s-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "C-s-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "C-s-<down>") 'shrink-window)
+(global-set-key (kbd "C-s-<up>") 'enlarge-window)
 
 ;; Change buffers easily
 (global-set-key (kbd "C-x <up>") 'windmove-up)
