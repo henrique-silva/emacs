@@ -35,7 +35,8 @@
 (global-set-key [f8] 'neotree-toggle)
 
 ;; Aggressive Indent
-(add-hook 'c-mode-hook #'aggressive-indent-mode)
+(add-to-list 'load-path "~/.emacs.d/elpa/aggressive-indent-1.2/")
+;;(add-hook 'c-mode-hook #'aggressive-indent-mode)
 
 ;; Highlight corresponding parentheses when cursor is on one
 (show-paren-mode t)
@@ -80,7 +81,7 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 
 ;; Indent whole buffer command
-(defun indent-buffer ()                                                     
+(defun indent-buffer ()
   "Indents an entire buffer using the default intenting scheme."
   (interactive)
   (save-excursion
@@ -88,6 +89,7 @@
     (indent-region (point-min) (point-max) nil)
     (untabify (point-min) (point-max))))
 (global-set-key "\C-x\\" 'indent-buffer)
+(put 'downcase-region 'disabled nil)
 
 (setq tramp-default-method "ssh")
 
