@@ -29,6 +29,9 @@
  '(rainbow-delimiters-depth-9-face ((t (:foreground "DodgerBlue3"))))
 )
 
+;; Indentation level
+(setq c-default-style "linux" c-basic-offset 4)
+
 ;; Neotree
 (add-to-list 'load-path "~/.emacs.d/neotree/")
 (require 'neotree)
