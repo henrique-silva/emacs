@@ -48,7 +48,8 @@
 (setq-default show-trailing-whitespace t)
 
 ;; Complete Anything Mode
-(add-hook 'after-init-hook 'global-company-mode)
+(add-to-list 'load-path "~/.emacs.d/elpa/company-0.8.12/")
+;;(add-hook 'after-init-hook 'global-company-mode)
 
 ;; Doxymacs
 (add-to-list 'load-path "~/.emacs.d/doxymacs/")
